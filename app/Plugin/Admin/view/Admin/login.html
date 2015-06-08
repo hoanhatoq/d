@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div class="container">
+		    <div class="row">
+				<div class="col-md-4 col-md-offset-4">
+		    		<div class="panel panel-default">
+                        <div class="panel-heading">
+					    	<h3 class="panel-title">Please sign in</h3>
+                        </div>
+                        <div class="panel-body">
+					    	<?php echo $this->Form->create('Admin',array("accept-charset" => "UTF-8",'role'=>'form')); ?>
+		                    <fieldset>
+					    	  	<div class="form-group">
+					    		    <?php echo $this->Form->input('username', array('class'=>'form-control', 'placeholder'=>'Username','label' => false, 'required' => false)); ?>
+					    		</div>
+					    		<div class="form-group">
+					    			<?php echo $this->Form->input('password',array('class'=>'form-control','placeholder'=>'Password','label' => false, 'required' => false)); ?>
+					    		</div>
+					    		<div class="checkbox">
+					    	    	<label>
+					    	    		<!-- <input name="remember" type="checkbox" value="Remember Me"> Remember Me -->
+					    	    		<?php echo $this->Form->checkbox('rememberMe',array('type'=>'checkbox','label' => 'rememberMe')).'Remember Me'; ?>
+					    	    	</label>
+					    	    </div>
+					    		<?php echo $this->Form->input('Login',array('label' => false, 'type'=>'submit','class'=>'btn btn-lg btn-success btn-block'));?>
+					    	</fieldset>
+					    		<?php echo (isset($error))?$error:'';?>
+					      	</form>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
